@@ -1,0 +1,10 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+    <div class="container-fluid mx-5 p-1">
+        
+        <h5><b>{{ blog.title }}</b></h5>
+        <p>{{ blog.date|date:'F jS Y' }}</p>
+        <h5>{{ blog.body }}</h5>
+    </div>
+{% endblock %}

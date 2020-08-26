@@ -1,0 +1,12 @@
+{% extends 'portfolio/base.html' %}
+
+{% block content %}
+    <div class="container-fluid mx-5 p-1">
+        {% for blog in blogs %}
+            <a href="{% url 'blog:detail' blog.id  %}"><h5>{{ blog.title }}</h5></a>
+            <p>{{ blog.date|date:'M d Y' }}</p>
+            <p>{{ blog.body|truncatechars:10 }}
+        {% endfor %}
+    </div>
+{% endblock %}
+
